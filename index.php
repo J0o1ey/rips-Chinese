@@ -13,12 +13,12 @@ RIPPS——PHP脚本中的静态源代码分析器
 
 include 'config/general.php';
 
-?><html>
+?><!DOCTYPE html>
+<html lang="zh">
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/rips.css" />
 	<?php
-
 	foreach($stylesheets as $stylesheet)
 	{
 		echo "\t<link type=\"text/css\" href=\"css/$stylesheet.css\" rel=\"";
@@ -63,8 +63,7 @@ include 'config/general.php';
 			<td nowrap><span class="STYLE3">扫描级别:</span></td>
 			<td nowrap>
 				<select id="verbosity" style="width:100%" title="选择扫描级别">
-					<?php 
-					
+					<?php		
 						$verbosities = array(
 							1 => '1. 只扫描用户选择的',
 							2 => '2. 文件/数据库 +1',
@@ -83,8 +82,7 @@ include 'config/general.php';
 			<td align="right" nowrap><span class="STYLE3">漏洞类型:</span> </td>
 			<td>
 				<select id="vector" style="width:100%" title="select vulnerability type to scan">
-					<?php 
-					
+					<?php		
 						$vectors = array(
 							'all' 			=> '全部',
 							'server' 		=> '全部服务',							
@@ -168,8 +166,7 @@ include 'config/general.php';
 <div class="scanned" id="scanned"></div>
 </div>
 
-<div id="result">
-	
+<div id="result">	
 	<div style="margin-left:30px;color:#000000;font-size:14px">
 		<h3>快速使用方法:</h3>
 	  <p>查找本地PHP源代码路径/文件<b></b> (eg. <em>F:/www/project1/</em> or <em>F:/www/index.php</em>), 选择你需要审计的漏洞类型，并点击扫描!<br>
@@ -207,8 +204,6 @@ include 'config/general.php';
 		  <li class="STYLE2">汉化:J0o1ey' QQ:547006660,Website:http://shell.mayidui.net,欢迎各位大佬、小白、WEB安全培训需求者联系我<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=547006660&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:547006660:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
 		</ul>
 	</div>
-	
 </div>
-
 </body>
 </html>
